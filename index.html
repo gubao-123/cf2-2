@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
@@ -30,8 +30,8 @@
     width: 100%;
   }
   .left-section {
-    flex: 1.5; /* 调整左侧区域比例 */
-    margin-right: 18px;
+    flex: 1; /* 调整左侧区域比例 */
+    margin-right: 20px;
   }
   .right-section {
     flex: 1;
@@ -40,13 +40,17 @@
     font-size: 24px;
     color: #333333;
     margin-bottom: 20px;
+margin-left: 300px;
+
   }
   .writing-area {
-    width: 580px; /* 增加大框宽度 */
-    height: 300px; /* 增加大框高度 */
+    width: 640px; /* 增加大框宽度 */
+    height: 400px; /* 增加大框高度 */
     background-color: white;
     border: 1px solid #333333;
     margin-bottom: 20px;
+
+    margin-left: 150px;
     position: relative;
   }
   canvas {
@@ -59,9 +63,12 @@
     font-size: 24px;
     width: 300px; /* 增加输入框宽度 */
     margin-bottom: 20px;
+margin-left: 300px;
+
   }
   button {
     padding: 10px 20px;
+
     font-size: 18px;
     border: none;
     cursor: pointer;
@@ -71,25 +78,25 @@
   #submitBtn {
     background-color: #4CAF50;
     color: white;
-  }
+margin-left: 60px;  }
   #resetGameBtn {
     background-color: #F44336;
-    color: white;
+    color: white;margin-left: 60px;
   }
   #clearCanvasBtn {
-    background-color: #FF9800;
-    color: white;
+  background-color: #FF9800;
+    color: white;margin-left: 300px;
   }
   .feedback {
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 20px;margin-left: 300px;
   }
   .correct {
-    color: green;
+    color: green;margin-left: 300px;
   }
   .incorrect {
     color: red;
-  }
+margin-left: 300px;  }
   .button-container {
     display: flex;
     justify-content: flex-start;
@@ -103,7 +110,7 @@
     <div class="left-section">
       <div class="question" id="question"></div>
       <div class="writing-area" id="writingArea">
-        <canvas id="drawingCanvas"></canvas>
+      <canvas id="drawingCanvas"></canvas>
       </div>
       <input type="text" id="answerInput" placeholder="请输入答案">
       <div class="feedback" id="feedback"></div>
@@ -127,8 +134,8 @@
   let isDrawing = false;
 
   // 设置Canvas大小
-  canvas.width = 580; // 增加Canvas宽度
-  canvas.height = 300; // 增加Canvas高度
+  canvas.width = 640; // 增加Canvas宽度
+  canvas.height = 400; // 增加Canvas高度
 
   // 设置线条样式
   ctx.strokeStyle = '#000000';
